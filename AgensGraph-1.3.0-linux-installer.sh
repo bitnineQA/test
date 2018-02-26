@@ -53,16 +53,16 @@ _check_idir() {
 		echo ""$instdir" is already exists. Please specify the another directory."
         echo -n "-> "
             read instdir
-				while true; do
+		while true; do
                     if [ -d $instdir ]; then
-						echo
+			echo
                         echo ""$instdir" is already exists. Please specify the another directory."
                         echo -n "-> "
                         read instdir
                     else
                         mkdir -p $instdir
                         instdir=$instdir
-						echo
+			echo
                         echo "** Install Directory is $instdir"
                         break
                     fi
@@ -83,13 +83,13 @@ _check_ddir() {
             read datadir
                  while true; do
                      if [ -d $datadir ]; then
-						echo
+			echo
                         echo ""$datadir" is already exists. Please specify the another directory."
                         echo -n "-> "
                         read datadir
                      else
                         datadir=$datadir
-						echo 
+			echo 
                         echo "** Data Directory is $datadir" 
                         break
                      fi
@@ -154,7 +154,7 @@ _port_check() {
 	        read enter
 			echo $enter
 	        	if [ "$enter" = "" ]; then
-					export PG_PORT=$enter
+			export PG_PORT=$enter
 	            	continue
 	                echo 
 	                echo "** AgensGraph port $PGPORT"
@@ -162,7 +162,7 @@ _port_check() {
 	                PGPORT=$enter
 	                echo
 	                echo "** AgensGraph port $PGPORT"
-					export PGPORT=$PGPORT
+			export PGPORT=$PGPORT
 	            fi
 	fi
 }
