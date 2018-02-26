@@ -34,12 +34,6 @@ _check_java() {
     fi
 }
 
-# install required software
-#_install_required_software() {
-#    _log "*** installing required software "
-#    yum install -y gcc glibc glib-common readline readline-devel zlib zlib-devel
-#}
-
 _check_OS Linux >> $HOME/AgensGraph-install.log 2>&1
 _check_user `id -un` >> $HOME/AgensGraph-install.log 2>&1
 _check_java >> $HOME/AgensGraph-install.log 2>&1
